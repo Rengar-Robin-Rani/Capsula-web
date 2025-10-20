@@ -43,10 +43,12 @@ export default function PreguntasFrecuentesPage() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border border-border rounded-lg bg-card px-6 data-[state=open]:bg-card/80"
+                className="border border-border rounded-lg bg-card px-6 data-[state=open]:bg-card/80 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
               >
-                <AccordionTrigger className="text-left text-white hover:text-primary hover:no-underline py-6">
-                  <span className="text-lg font-medium">{faq.question}</span>
+                <AccordionTrigger className="text-left text-white hover:text-primary hover:no-underline py-6 group">
+                  <span className="text-lg font-medium group-hover:translate-x-1 transition-transform duration-300">
+                    {faq.question}
+                  </span>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">{faq.answer}</AccordionContent>
               </AccordionItem>

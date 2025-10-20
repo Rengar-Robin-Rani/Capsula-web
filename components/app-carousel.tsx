@@ -57,22 +57,24 @@ export function AppCarousel() {
   }
 
   return (
-    <div className="relative">
-      <Card className="overflow-hidden bg-card border-border">
+    <div className="relative max-w-4xl mx-auto">
+      <Card className="overflow-hidden bg-card border-border hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 group">
         <CardContent className="p-0">
-          <div className="relative aspect-video">
+          <div className="relative h-[400px] sm:h-[450px]">
             <img
               src={apps[currentIndex].image || "/placeholder.svg"}
               alt={apps[currentIndex].name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end">
-              <div className="p-6 w-full">
+              <div className="p-4 sm:p-6 w-full">
                 <div className="flex items-center gap-2 mb-2">
-                  <h3 className="text-2xl font-bold text-foreground">{apps[currentIndex].name}</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                    {apps[currentIndex].name}
+                  </h3>
                   {apps[currentIndex].status === "coming-soon" && <Badge variant="secondary">Próximamente</Badge>}
                 </div>
-                <p className="text-muted-foreground">{apps[currentIndex].description}</p>
+                <p className="text-sm sm:text-base text-muted-foreground">{apps[currentIndex].description}</p>
               </div>
             </div>
           </div>
@@ -82,7 +84,7 @@ export function AppCarousel() {
       <Button
         variant="outline"
         size="icon"
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-black hover:scale-110 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
         onClick={goToPrevious}
       >
         <ChevronLeft className="h-4 w-4" />
@@ -91,7 +93,7 @@ export function AppCarousel() {
       <Button
         variant="outline"
         size="icon"
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-black hover:scale-110 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
         onClick={goToNext}
       >
         <ChevronRight className="h-4 w-4" />
@@ -102,7 +104,9 @@ export function AppCarousel() {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all ${index === currentIndex ? "bg-primary w-8" : "bg-muted"}`}
+            className={`h-2 rounded-full transition-all duration-300 hover:bg-primary ${
+              index === currentIndex ? "bg-primary w-8" : "bg-muted w-2 hover:w-4"
+            }`}
           />
         ))}
       </div>

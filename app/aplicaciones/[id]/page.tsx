@@ -113,7 +113,11 @@ export default function AplicacionDetailPage({ params }: { params: { id: string 
 
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
-          <Button variant="ghost" asChild className="mb-8">
+          <Button
+            variant="ghost"
+            asChild
+            className="mb-8 hover:bg-primary/10 hover:text-primary hover:translate-x-[-4px] transition-all duration-300"
+          >
             <Link href="/aplicaciones">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Volver a Aplicaciones
@@ -136,28 +140,32 @@ export default function AplicacionDetailPage({ params }: { params: { id: string 
               <p className="text-xl text-primary mb-4">{app.tagline}</p>
               <p className="text-muted-foreground mb-8 leading-relaxed">{app.description}</p>
 
-              <Card className="bg-card border-border mb-8">
+              <Card className="bg-card border-border mb-8 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold text-foreground mb-4">Características Principales</h3>
                   <ul className="space-y-3">
                     {app.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <Check className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">{feature}</span>
+                      <li key={index} className="flex items-start group/item">
+                        <Check className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300" />
+                        <span className="text-muted-foreground group-hover/item:text-gray-300 transition-colors duration-300">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="bg-primary/5 border-primary/20">
+              <Card className="bg-primary/5 border-primary/20 hover:bg-primary/10 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold text-foreground mb-4">Beneficios</h3>
                   <ul className="space-y-3">
                     {app.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0" />
-                        <span className="text-muted-foreground">{benefit}</span>
+                      <li key={index} className="flex items-start group/item">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0 group-hover/item:scale-150 transition-transform duration-300" />
+                        <span className="text-muted-foreground group-hover/item:text-gray-300 transition-colors duration-300">
+                          {benefit}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -166,11 +174,15 @@ export default function AplicacionDetailPage({ params }: { params: { id: string 
             </div>
 
             <div className="lg:sticky lg:top-24">
-              <div className="rounded-lg overflow-hidden mb-6">
-                <img src={app.image || "/placeholder.svg"} alt={app.name} className="w-full h-auto" />
+              <div className="rounded-lg overflow-hidden mb-6 group/img">
+                <img
+                  src={app.image || "/placeholder.svg"}
+                  alt={app.name}
+                  className="w-full h-auto group-hover/img:scale-105 transition-transform duration-500"
+                />
               </div>
 
-              <Card className="bg-card border-border">
+              <Card className="bg-card border-border hover:border-primary/50 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300">
                 <CardContent className="pt-6">
                   <h3 className="text-2xl font-bold text-foreground mb-4">
                     {app.status === "available" ? "¿Interesado en esta solución?" : "¿Quieres saber más?"}
@@ -180,10 +192,14 @@ export default function AplicacionDetailPage({ params }: { params: { id: string 
                       ? "Contáctanos para obtener una demostración personalizada y descubre cómo podemos ayudarte."
                       : "Regístrate para recibir actualizaciones sobre el lanzamiento de esta aplicación."}
                   </p>
-                  <Button asChild className="w-full" size="lg">
-                    <Link href="/contacto">
+                  <Button
+                    asChild
+                    className="w-full hover:scale-105 hover:shadow-xl hover:shadow-primary/50 transition-all duration-300"
+                    size="lg"
+                  >
+                    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
                       {app.status === "available" ? "Solicitar Demo" : "Mantenerme Informado"}
-                    </Link>
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
