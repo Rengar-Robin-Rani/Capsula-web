@@ -34,35 +34,46 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
-            Soluciones de Software <span className="text-primary">Innovadoras</span>
-          </h1>
-          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto text-pretty">
-            Creamos soluciones mediante software para optimizar tu negocio y llevar tu empresa al siguiente nivel
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              asChild
-              className="bg-primary text-black hover:bg-primary/90 hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300"
-            >
-              <Link href="/aplicaciones">Ver Aplicaciones</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="border-primary text-primary hover:bg-primary hover:text-white hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 bg-transparent transition-all duration-300"
-            >
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-                Hablar por WhatsApp
-              </a>
-            </Button>
+        <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20">
+          {/* Columna Izquierda: Texto + Botones */}
+          <div className="flex-1 flex flex-col justify-center  items-center lg:items-start text-center lg:text-left px-36">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Soluciones de Software <span className="text-primary">Innovadoras</span>
+            </h1>
+            <p className="text-xl text-gray-400 mb-8 max-w-xl">
+              Creamos soluciones mediante software para optimizar tu negocio y llevar tu empresa al siguiente nivel
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button
+                size="lg"
+                asChild
+                className="bg-primary text-black hover:bg-primary/90 hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300"
+              >
+                <Link href="/aplicaciones">Ver Aplicaciones</Link>
+              </Button>
+              <Button
+                size="lg"
+                asChild
+                className="border-primary text-primary hover:bg-primary hover:text-black hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 bg-white/20 transition-all duration-300"
+              >
+                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                  Hablar por WhatsApp
+                </a>
+              </Button>
+            </div>
           </div>
-        </div>
-      </section>
+
+          {/* Columna Derecha: Logo */}
+          
+            <img
+              src="/Logo-capsula.png"
+              alt="Logo Cápsula Software"
+              className="w-48 sm:w-64 md:w-72 lg:w-[420px] object-contain drop-shadow-[0_0_40px_rgba(16,185,129,0.4)] mr-30"
+            />
+        
+        </section>
+
+
 
       {/* Features Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-card/30">

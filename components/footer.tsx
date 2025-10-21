@@ -8,9 +8,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4 group">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center transition-transform group-hover:scale-110 group-hover:rotate-12 duration-300">
-                <span className="text-black font-bold text-lg">C</span>
-              </div>
+              
+                <img src="/logo-capsula.png" alt="Capsula Software Logo"  className="h-12 w-12"/>
+              
               <span className="text-xl font-bold text-white">Capsula Software</span>
             </div>
             <p className="text-gray-400 text-sm">Creamos soluciones mediante software para optimizar tu negocio.</p>
@@ -55,11 +55,11 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-2 text-gray-400 text-sm hover:text-primary transition-colors duration-300">
                 <Phone size={16} className="flex-shrink-0" />
-                <span>+54 11 1234-5678</span>
+                <span>+54 341 1234-5678</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-400 text-sm hover:text-primary transition-colors duration-300">
                 <MapPin size={16} className="flex-shrink-0" />
-                <span>Buenos Aires, Argentina</span>
+                <span>Rosario, Santa Fe. Argentina</span>
               </li>
             </ul>
           </div>

@@ -64,7 +64,7 @@ export function AppCarousel() {
             <img
               src={apps[currentIndex].image || "/placeholder.svg"}
               alt={apps[currentIndex].name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-cover transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end">
               <div className="p-4 sm:p-6 w-full">
@@ -82,18 +82,16 @@ export function AppCarousel() {
       </Card>
 
       <Button
-        variant="outline"
         size="icon"
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-black hover:scale-110 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-white/30 backdrop-blur-sm hover:bg-primary hover:text-black hover:scale-110 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
         onClick={goToPrevious}
       >
         <ChevronLeft className="h-4 w-4" />
       </Button>
 
       <Button
-        variant="outline"
         size="icon"
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-black hover:scale-110 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-white/30 backdrop-blur-sm hover:bg-primary hover:text-black hover:scale-110 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
         onClick={goToNext}
       >
         <ChevronRight className="h-4 w-4" />

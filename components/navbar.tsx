@@ -13,12 +13,10 @@ export function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center transition-transform group-hover:scale-110 group-hover:rotate-12 duration-300">
-              <span className="text-black font-bold text-lg">C</span>
-            </div>
-            <span className="text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">
-              Cápsula Software
-            </span>
+              <img src="/logo-capsula.png" alt="Capsula Software Logo " className="h-12 w-12 transition-transform group-hover:scale-110 group-hover:rotate-12 duration-300" />
+              <span className="text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">
+                Cápsula Software
+              </span>
           </Link>
 
           {/* Desktop Navigation */}
