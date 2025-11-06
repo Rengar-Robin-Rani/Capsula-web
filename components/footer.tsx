@@ -55,7 +55,7 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-2 text-gray-400 text-sm hover:text-primary transition-colors duration-300">
                 <Phone size={16} className="flex-shrink-0" />
-                <span>+54 341 1234-5678</span>
+                <span>+54 9 341 705-8151</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-400 text-sm hover:text-primary transition-colors duration-300">
                 <MapPin size={16} className="flex-shrink-0" />

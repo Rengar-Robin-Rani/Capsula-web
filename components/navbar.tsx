@@ -48,7 +48,7 @@ export function Navbar() {
               asChild
               className="bg-primary text-black hover:bg-primary hover:scale-110 hover:shadow-lg hover:shadow-primary/40 transition-all duration-300 font-semibold"
             >
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/3417058151" target="_blank" rel="noopener noreferrer">
                 Hablar por WhatsApp
               </a>
             </Button>

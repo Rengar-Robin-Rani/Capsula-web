@@ -56,7 +56,7 @@ export default function HomePage() {
               asChild
               className="border-primary text-primary hover:bg-primary hover:text-black hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 bg-white/20 transition-all duration-300"
             >
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/3417058151" target="_blank" rel="noopener noreferrer">
                 Hablar por WhatsApp
               </a>
             </Button>
@@ -135,7 +135,7 @@ export default function HomePage() {
             asChild
             className="bg-primary text-black hover:bg-primary/90 hover:scale-110 hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300"
           >
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/3417058151" target="_blank" rel="noopener noreferrer">
               Hablar por WhatsApp
             </a>
           </Button>

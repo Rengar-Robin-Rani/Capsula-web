@@ -1,5 +1,5 @@
 "use client"
-
+import Link from "next/link"
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -12,28 +12,28 @@ const apps = [
     name: "Capsula Barber",
     description: "Sistema completo de gestión para barberías",
     status: "available",
-    image: "/modern-barbershop-management-app-interface.jpg",
+    image: "/barbershop-management-dashboard.png",
   },
   {
     id: "capsula-retail",
     name: "Capsula Retail",
     description: "Solución integral para comercios minoristas",
     status: "coming-soon",
-    image: "/retail-store-management-system.jpg",
+    image: "/Logo-proximamente.webp",
   },
   {
     id: "capsula-fitness",
     name: "Capsula Fitness",
     description: "Gestión completa para gimnasios y centros deportivos",
     status: "coming-soon",
-    image: "/gym-fitness-management-app.jpg",
+    image: "/Logo-proximamente.webp",
   },
   {
     id: "capsula-restaurant",
     name: "Capsula Restaurant",
     description: "Sistema de gestión para restaurantes y cafeterías",
     status: "coming-soon",
-    image: "/restaurant-management-system-interface.png",
+    image: "/Logo-proximamente.webp",
   },
 ]
 
@@ -61,22 +61,53 @@ export function AppCarousel() {
       <Card className="overflow-hidden bg-card border-border hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 group">
         <CardContent className="p-0">
           <div className="relative h-[400px] sm:h-[450px]">
-            <img
-              src={apps[currentIndex].image || "/placeholder.svg"}
-              alt={apps[currentIndex].name}
-              className="w-full h-full object-cover transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end">
-              <div className="p-4 sm:p-6 w-full">
-                <div className="flex items-center gap-2 mb-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-                    {apps[currentIndex].name}
-                  </h3>
-                  {apps[currentIndex].status === "coming-soon" && <Badge variant="secondary">Próximamente</Badge>}
+            <Link
+                href={`/aplicaciones/${apps[currentIndex].id}`}
+                className="group block relative h-full"
+              >
+                {/* Imagen principal */}
+                <img
+                  src={apps[currentIndex].image || "/placeholder.svg"}
+                  alt={apps[currentIndex].name}
+                  className="w-full h-full object-cover transition-transform duration-700 cursor-pointer"
+                />
+
+                {/* Gradiente que aparece al hacer hover */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <div className="bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-full w-full" />
+                  {/* Texto sobre la imagen */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 w-full pointer-events-none">
+                    <div className="flex items-center gap-2 mb-2">
+                      <h3 className="text-xl sm:text-2xl font-bold text-emerald-400 transition-colors duration-300">
+                        {apps[currentIndex].name}
+                      </h3>
+                      {apps[currentIndex].status === "coming-soon" && (
+                        <Badge variant="secondary">Próximamente</Badge>
+                      )}
+                    </div>
+                    <p className="text-sm sm:text-base text-gray-300">
+                      {apps[currentIndex].description}
+                    </p>
+                  </div>
                 </div>
-                <p className="text-sm sm:text-base text-muted-foreground">{apps[currentIndex].description}</p>
+              </Link>
+
+                {/* 🧩 Gradiente visual sin bloquear clics */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end">
+                <div className="p-4 sm:p-6 w-full pointer-events-auto">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                      {apps[currentIndex].name}
+                    </h3>
+                    {apps[currentIndex].status === "coming-soon" && (
+                      <Badge variant="secondary">Próximamente</Badge>
+                    )}
+                  </div>
+                  <p className="text-sm sm:text-base text-muted-foreground">
+                    {apps[currentIndex].description}
+                  </p>
+                </div>
               </div>
-            </div>
           </div>
         </CardContent>
       </Card>

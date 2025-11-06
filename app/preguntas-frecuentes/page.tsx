@@ -34,7 +34,7 @@ export default function PreguntasFrecuentesPage() {
     <div className="min-h-screen flex flex-col bg-black">
       <Navbar />
 
-      <main className="flex-1 pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <main className="flex-1 pt-24 pb-22 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-12">Preguntas Frecuentes</h1>
 

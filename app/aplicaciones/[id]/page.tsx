@@ -27,7 +27,7 @@ const applicationsData = {
     ],
     benefits: [
       "Reduce el tiempo de gestión administrativa en un 70%",
-      "Aumenta la satisfacción del cliente con recordatorios automáticos",
+      /* "Aumenta la satisfacción del cliente con recordatorios automáticos", */
       "Optimiza el uso de recursos y espacios",
       "Mejora la rentabilidad con análisis detallados",
     ],
@@ -38,20 +38,22 @@ const applicationsData = {
     description:
       "Próximamente: Una solución completa para comercios minoristas que integra punto de venta, inventario y análisis de ventas.",
     status: "coming-soon",
-    image: "/modern-retail-store-with-pos-system.jpg",
+    image: "/Logo-proximamente.webp",
     features: [
-      "Punto de venta intuitivo y rápido",
+      "Proximamente podras ver las características que te ofrece esta aplicacion",
+/*       "Punto de venta intuitivo y rápido",
       "Control de inventario en tiempo real",
       "Gestión de múltiples sucursales",
       "Sistema de fidelización de clientes",
       "Reportes de ventas y análisis",
-      "Integración con e-commerce",
+      "Integración con e-commerce", */
     ],
     benefits: [
-      "Agiliza el proceso de venta",
+      "Proximamente podras ver los beneficios de esta aplicacion",
+/*       "Agiliza el proceso de venta",
       "Evita quiebres de stock",
       "Fideliza a tus clientes",
-      "Toma decisiones basadas en datos",
+      "Toma decisiones basadas en datos", */
     ],
   },
   "capsula-fitness": {
@@ -60,20 +62,22 @@ const applicationsData = {
     description:
       "Próximamente: Sistema completo de gestión para gimnasios y centros deportivos con seguimiento de miembros y clases.",
     status: "coming-soon",
-    image: "/modern-gym-with-digital-management.jpg",
+    image: "/Logo-proximamente.webp",
     features: [
-      "Gestión de membresías y pagos",
+      "Proximamente podras ver las características que te ofrece esta aplicacion",
+  /*     "Gestión de membresías y pagos",
       "Programación de clases y entrenadores",
       "Control de acceso automatizado",
       "Planes de entrenamiento personalizados",
       "Seguimiento de progreso de miembros",
-      "Aplicación móvil para miembros",
+      "Aplicación móvil para miembros", */
     ],
     benefits: [
-      "Automatiza la gestión de membresías",
+      "Proximamente podras ver los beneficios de esta aplicacion",
+   /*    "Automatiza la gestión de membresías",
       "Mejora la experiencia de tus miembros",
       "Optimiza la ocupación de clases",
-      "Aumenta la retención de clientes",
+      "Aumenta la retención de clientes", */
     ],
   },
   "capsula-restaurant": {
@@ -82,20 +86,22 @@ const applicationsData = {
     description:
       "Próximamente: Sistema integral para restaurantes y cafeterías con gestión de mesas, pedidos y cocina.",
     status: "coming-soon",
-    image: "/modern-restaurant-with-digital-ordering.jpg",
+    image: "/Logo-proximamente.webp",
     features: [
-      "Gestión de mesas y reservas",
+      "Proximamente podras ver las características que te ofrece esta aplicacion",
+  /*     "Gestión de mesas y reservas",
       "Sistema de pedidos digital",
       "Control de cocina en tiempo real",
       "Gestión de menú y precios",
       "Integración con delivery",
-      "Reportes de ventas por producto",
+      "Reportes de ventas por producto", */
     ],
     benefits: [
-      "Reduce errores en pedidos",
+      "Proximamente podras ver los beneficios de esta aplicacion",
+ /*    "Reduce errores en pedidos",
       "Agiliza el servicio",
       "Optimiza la rotación de mesas",
-      "Mejora la comunicación cocina-salón",
+      "Mejora la comunicación cocina-salón", */
     ],
   },
 }
